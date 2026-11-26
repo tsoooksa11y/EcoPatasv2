@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="EcoPatas - Microemprendimiento sustentable en Puerto Iguazú, Misiones. Camitas de neumáticos y ropita ecológica para mascotas mediante economía circular y upcycling.">
+    <meta name="keywords" content="EcoPatas, upcycling mascotas, camitas de neumáticos, ropa reciclada perros, economía circular Puerto Iguazú, Misiones">
+    <meta name="author" content="Equipo EcoPatas">
+    <title>EcoPatas | Donde cada pata deja huellas</title>
+    
+    <!-- Favicon con el logo oficial EcoPatas -->
+    <link rel="icon" type="image/x-icon" href="logo.ico">
+    <link rel="apple-touch-icon" href="logo.png">
+    
+    <!-- Google Fonts: Poppins para diseño moderno y legible -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Hoja de estilos personalizada con la Lilac Palette -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ========================================================
+         BARRA DE NAVEGACIÓN FIJA (NAVBAR)
+         ======================================================== -->
+    <header class="navbar-wrapper">
+        <nav class="navbar" id="main-nav" aria-label="Navegación principal">
+            <a href="#inicio" class="navbar-logo" aria-label="Ir al inicio de EcoPatas">
+                <img src="logo.png" alt="Logo EcoPatas" class="brand-logo-img" width="46" height="46">
+                <div class="logo-text">
+                    <span class="brand-title">EcoPatas</span>
+                    <span class="brand-badge" data-i18n="brand_badge">Triple Impacto</span>
+                </div>
+            </a>
+
+            <!-- Enlaces del Menú -->
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#inicio" class="nav-link active" data-i18n="nav_inicio">Inicio</a></li>
+                <li><a href="#nosotros" class="nav-link" data-i18n="nav_nosotros">Nosotros</a></li>
+                <li><a href="#productos" class="nav-link" data-i18n="nav_productos">Productos</a></li>
+                <li><a href="#fidelidad" class="nav-link" data-i18n="nav_fidelidad">Fidelidad</a></li>
+                <li><a href="#impacto" class="nav-link" data-i18n="nav_impacto">Calculador Ecológico</a></li>
+                <li><a href="#admin" class="nav-link admin-nav-pill" data-i18n="nav_admin">Panel Admin</a></li>
+                <li><a href="#contacto" class="nav-link nav-btn-cta" data-i18n="nav_contacto">Contacto</a></li>
+                
+                <!-- Selector de Idioma dentro del Menú Móvil -->
+                <li class="mobile-lang-item">
+                    <div class="mobile-lang-box">
+                        <span class="mobile-lang-title">🌐 Idioma / Language:</span>
+                        <div class="mobile-lang-buttons">
+                            <button type="button" class="mobile-lang-btn active" data-lang="es" onclick="cambiarIdioma('es')">🇦🇷 ES</button>
+                            <button type="button" class="mobile-lang-btn" data-lang="pt" onclick="cambiarIdioma('pt')">🇧🇷 PT</button>
+                            <button type="button" class="mobile-lang-btn" data-lang="en" onclick="cambiarIdioma('en')">🇬🇧 EN</button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+
+            <!-- Acciones de Navegación: Botonera de 3 Idiomas + Menú Móvil -->
+            <div class="nav-actions">
+                <!-- Selector de Idioma Segmentado (1. Español base, 2. Português, 3. English) -->
+                <div class="lang-switch-wrapper" role="group" aria-label="Cambiar idioma de la página">
+                    <div class="lang-switch-track">
+                        <button type="button" class="lang-pill active" data-lang="es" onclick="cambiarIdioma('es')" title="Español (Idioma Base)" aria-label="Cambiar a Español">
+                            <span class="lang-flag">🇦🇷</span>
+                            <span class="lang-text">ES</span>
+                        </button>
+                        <button type="button" class="lang-pill" data-lang="pt" onclick="cambiarIdioma('pt')" title="Português (Segundo Idioma)" aria-label="Mudar para Português">
+                            <span class="lang-flag">🇧🇷</span>
+                            <span class="lang-text">PT</span>
+                        </button>
+                        <button type="button" class="lang-pill" data-lang="en" onclick="cambiarIdioma('en')" title="English (Third Language)" aria-label="Switch to English">
+                            <span class="lang-flag">🇬🇧</span>
+                            <span class="lang-text">EN</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Botón Hamburguesa para Móviles -->
+                <button class="mobile-toggle" id="mobile-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Abrir o cerrar menú">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <main id="content">
+
+        <!-- ========================================================
+             SECCIÓN HERO (INICIO)
+             ======================================================== -->
+        <section id="inicio" class="hero-section">
+            <div class="hero-background-shapes" aria-hidden="true">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+            </div>
+
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="hero-tag">
+                        <span class="tag-icon">🌱</span>
+                        <span data-i18n="hero_tag">Microemprendimiento Circular • Puerto Iguazú</span>
+                    </div>
+                    <h1 class="hero-title" data-i18n="hero_title">
+                        Amor por los animales, <span class="highlight-text">compromiso con el planeta</span>
+                    </h1>
+                    <p class="hero-slogan" data-i18n="hero_slogan">"Donde cada pata deja huellas"</p>
+                    <p class="hero-description" data-i18n="hero_description">
+                        Transformamos neumáticos en desuso y prendas textiles recuperadas en confortables camitas y abrigos ecológicos para perros y gatos. Economía circular y upcycling desde el corazón de Misiones.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#productos" class="btn btn-primary">
+                            <span data-i18n="hero_btn_products">Ver Productos</span>
+                            <svg class="btn-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                        <a href="#impacto" class="btn btn-secondary">
+                            <span data-i18n="hero_btn_impact">Simular Impacto Verde</span>
+                            <svg class="btn-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="hero-card-showcase">
+                        <div class="showcase-badge" data-i18n="showcase_badge">Modelo Destacado</div>
+                        <div class="showcase-illustration" role="img" aria-label="Ilustración de camita ecológica y perrito abrigado">
+                            <div class="eco-visual-composition">
+                                <svg viewBox="0 0 320 280" class="hero-svg">
+                                    <defs>
+                                        <linearGradient id="tireGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" stop-color="#4F1176" />
+                                            <stop offset="100%" stop-color="#3B165C" />
+                                        </linearGradient>
+                                        <linearGradient id="pillowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                            <stop offset="0%" stop-color="#CCAAE6" />
+                                            <stop offset="100%" stop-color="#A788DC" />
+                                        </linearGradient>
+                                        <filter id="softShadow" x="-10%" y="-10%" width="120%" height="120%">
+                                            <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#3B165C" flood-opacity="0.25"/>
+                                        </filter>
+                                    </defs>
+                                    <ellipse cx="160" cy="190" rx="130" ry="55" fill="url(#tireGrad)" filter="url(#softShadow)"/>
+                                    <path d="M40 185 Q160 235 280 185" stroke="#7D45C6" stroke-width="4" fill="none" opacity="0.6"/>
+                                    <path d="M45 195 Q160 245 275 195" stroke="#7E42AC" stroke-width="3" fill="none" opacity="0.5"/>
+                                    <ellipse cx="160" cy="180" rx="105" ry="42" fill="url(#pillowGrad)"/>
+                                    <ellipse cx="160" cy="178" rx="85" ry="32" fill="#E2CEF3" opacity="0.9"/>
+                                    <circle cx="160" cy="177" r="12" fill="#6B297C"/>
+                                    <circle cx="146" cy="162" r="5" fill="#7D45C6"/>
+                                    <circle cx="158" cy="157" r="5" fill="#7D45C6"/>
+                                    <circle cx="170" cy="162" r="5" fill="#7D45C6"/>
+                                    <path d="M120 135 C120 100, 150 95, 175 110 C195 120, 205 145, 195 160 C180 170, 130 165, 120 135 Z" fill="#9673D2" opacity="0.85"/>
+                                    <circle cx="185" cy="115" r="4" fill="#3B165C"/>
+                                    <path d="M165 95 C160 85, 145 90, 150 105 Z" fill="#7E42AC"/>
+                                    <path d="M130 130 Q160 145 185 138" stroke="#CCAAE6" stroke-width="5" stroke-linecap="round" fill="none"/>
+                                    <path d="M70 120 Q85 105 100 120 Q85 135 70 120 Z" fill="#A788DC"/>
+                                    <path d="M230 100 Q245 85 260 100 Q245 115 230 100 Z" fill="#A788DC"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="showcase-info">
+                            <span class="showcase-tag" data-i18n="showcase_tag">100% Neumático &amp; Retazos</span>
+                            <h3 class="showcase-name" data-i18n="showcase_name">Camita Eco-Iguazú</h3>
+                            <p class="showcase-desc" data-i18n="showcase_desc">Higienizada, acolchonada con tela reciclada y relleno cero desperdicio.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================
+             SECCIÓN SOBRE NOSOTROS
+             ======================================================== -->
+        <section id="nosotros" class="about-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle" data-i18n="about_subtitle">Nuestra Filosofía</span>
+                    <h2 class="section-title" data-i18n="about_title">Economía Circular que deja huellas positivas</h2>
+                    <div class="section-divider"></div>
+                    <p class="section-lead" data-i18n="about_lead">
+                        Somos un equipo comprometido con nuestro entorno en <strong>Puerto Iguazú, Misiones</strong>. Creamos valor protegiendo la biodiversidad local a través del upcycling.
+                    </p>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-card">
+                        <div class="about-icon-wrapper">
+                            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/>
+                            </svg>
+                        </div>
+                        <h3 class="about-card-title" data-i18n="about_c1_title">Upcycling &amp; Supra-reciclaje</h3>
+                        <p class="about-card-text" data-i18n="about_c1_text">
+                            No solo reciclamos: elevamos el valor de prendas en desuso y neumáticos desechados. Convertimos residuos en productos duraderos, confortables y de alta calidad para consentir a tus mascotas.
+                        </p>
+                    </div>
+
+                    <div class="about-card highlight-card">
+                        <div class="about-icon-wrapper">
+                            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M12 6v6l4 2"/>
+                            </svg>
+                        </div>
+                        <h3 class="about-card-title" data-i18n="about_c2_title">Cero Desperdicio (Zero Waste)</h3>
+                        <p class="about-card-text" data-i18n="about_c2_text">
+                            Cada retazo sobrante de la confección de ropita se tritura cuidadosamente para convertirse en el mullido relleno de nuestras almohadas. ¡En EcoPatas absolutamente nada se tira!
+                        </p>
+                    </div>
+
+                    <div class="about-card">
+                        <div class="about-icon-wrapper">
+                            <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                        </div>
+                        <h3 class="about-card-title" data-i18n="about_c3_title">Impacto Local en Iguazú</h3>
+                        <p class="about-card-text" data-i18n="about_c3_text">
+                            Retirar neumáticos en desuso en Misiones previene la acumulación de agua de lluvia y la proliferación de mosquitos transmisores del dengue, protegiendo a la comunidad y al ecosistema selvático.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Banner de ubicación -->
+                <div class="location-badge-container">
+                    <div class="location-badge">
+                        <div class="badge-pin">📍</div>
+                        <div class="badge-text" data-i18n="about_location_badge">
+                            <strong>Taller y Punto de Encuentro:</strong> Calle Bonpland 389 (entre Córdoba y Bonpland), Puerto Iguazú, Misiones, Argentina.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================
+             CATÁLOGO DE PRODUCTOS
+             ======================================================== -->
+        <section id="productos" class="products-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle" data-i18n="products_subtitle">Catálogo Sustentable</span>
+                    <h2 class="section-title" data-i18n="products_title">Nuestras Líneas de Producción Ecológica</h2>
+                    <div class="section-divider"></div>
+                    <p class="section-lead" data-i18n="products_lead">
+                        Diseños exclusivos, resistentes y lavables, pensados para el máximo confort de perros y gatos bajo un esquema 100% amigable con el medio ambiente.
+                    </p>
+                </div>
+
+                <div class="products-grid">
+                    
+                    <!-- Producto 1: Camitas ecológicas de neumáticos ($7.000) -->
+                    <article class="product-card">
+                        <div class="product-image-container">
+                            <div class="product-badge" data-i18n="prod1_badge">Top Circular</div>
+                            <div class="product-svg-wrap">
+                                <svg viewBox="0 0 200 160" width="100%" height="160">
+                                    <ellipse cx="100" cy="115" rx="85" ry="35" fill="#4F1176"/>
+                                    <ellipse cx="100" cy="110" rx="80" ry="30" fill="#3B165C"/>
+                                    <ellipse cx="100" cy="105" rx="68" ry="24" fill="#CCAAE6"/>
+                                    <ellipse cx="100" cy="103" rx="55" ry="18" fill="#E2CEF3"/>
+                                    <circle cx="100" cy="102" r="8" fill="#6B297C"/>
+                                    <path d="M40 115 Q100 145 160 115" stroke="#9673D2" stroke-width="2" fill="none"/>
+                                    <text x="100" y="55" text-anchor="middle" fill="#7E42AC" font-size="28" font-family="sans-serif">🛞 🐾</text>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="product-body">
+                            <div class="product-category" data-i18n="prod1_cat">Línea Descanso</div>
+                            <h3 class="product-title" data-i18n="prod1_title">Camitas Ecológicas de Neumáticos</h3>
+                            <p class="product-description" data-i18n="prod1_desc">
+                                Neumáticos reciclados de vehículos, completamente cepillados, desinfectados e impermeabilizados. Incluyen almohadón confeccionado con telas recicladas y relleno 100% de retazos textiles procesados bajo criterio cero desperdicio.
+                            </p>
+                            <ul class="product-features">
+                                <li data-i18n="prod1_f1"><strong>Estructura:</strong> Neumático recuperado higienizado</li>
+                                <li data-i18n="prod1_f2"><strong>Almohada:</strong> Funda lavable de tela reutilizada</li>
+                                <li data-i18n="prod1_f3"><strong>Relleno:</strong> Retazos textiles triturados y acondicionados</li>
+                                <li data-i18n="prod1_f4"><strong>Tamaños:</strong> Chico (rodado 13-14) / Mediano (rodado 15-16)</li>
+                            </ul>
+                            <div class="product-footer">
+                                <div class="product-price">
+                                    <span class="price-currency">$</span>
+                                    <span class="price-value">7.000</span>
+                                    <span class="price-note" data-i18n="price_note">AR$ aprox.</span>
+                                </div>
+                                <a href="#impacto" class="btn btn-outline" data-product="camita">
+                                    <span data-i18n="btn_see_impact">Ver Impacto</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Producto 2: Ropita ecológica para mascotas ($6.800) -->
+                    <article class="product-card">
+                        <div class="product-image-container">
+                            <div class="product-badge" data-i18n="prod2_badge">Prendas Únicas</div>
+                            <div class="product-svg-wrap">
+                                <svg viewBox="0 0 200 160" width="100%" height="160">
+                                    <rect x="50" y="35" width="100" height="90" rx="20" fill="#CCAAE6"/>
+                                    <path d="M50 45 L25 75 L45 90 L60 65" fill="#A788DC"/>
+                                    <path d="M150 45 L175 75 L155 90 L140 65" fill="#A788DC"/>
+                                    <circle cx="100" cy="35" r="22" fill="#E2CEF3"/>
+                                    <path d="M80 80 Q100 95 120 80" stroke="#6B297C" stroke-width="4" fill="none" stroke-linecap="round"/>
+                                    <text x="100" y="80" text-anchor="middle" fill="#4F1176" font-size="24">👕 🐶</text>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="product-body">
+                            <div class="product-category" data-i18n="prod2_cat">Línea Textil Upcycled</div>
+                            <h3 class="product-title" data-i18n="prod2_title">Ropita Ecológica para Mascotas</h3>
+                            <p class="product-description" data-i18n="prod2_desc">
+                                Buzitos, remeras y capitas térmicas confeccionadas a partir de ropa donada o en desuso (remeras de algodón, buzos frisados y camisas recicladas). Cómodas, flexibles y abrigadas.
+                            </p>
+                            <ul class="product-features">
+                                <li data-i18n="prod2_f1"><strong>Material:</strong> 100% Ropa en desuso seleccionada</li>
+                                <li data-i18n="prod2_f2"><strong>Talles:</strong> XS a XL (perros y gatos)</li>
+                                <li data-i18n="prod2_f3"><strong>Confort:</strong> Costuras suaves anti-rozaduras</li>
+                                <li data-i18n="prod2_f4"><strong>Diseño:</strong> Cada pieza es un modelo único e irrepetible</li>
+                            </ul>
+                            <div class="product-footer">
+                                <div class="product-price">
+                                    <span class="price-currency">$</span>
+                                    <span class="price-value">6.800</span>
+                                    <span class="price-note" data-i18n="price_note">AR$ aprox.</span>
+                                </div>
+                                <a href="#impacto" class="btn btn-outline" data-product="ropita">
+                                    <span data-i18n="btn_see_impact">Ver Impacto</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================
+             SECCIÓN CARTELITO DE FIDELIDAD (HUELLAS SOLIDARIAS)
+             ======================================================== -->
+        <section id="fidelidad" class="fidelity-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle" data-i18n="fidelity_subtitle">Huellas Solidarias</span>
+                    <h2 class="section-title" data-i18n="fidelity_title">Cartelito de Fidelidad</h2>
+                    <div class="section-divider"></div>
+                    <p class="section-lead" data-i18n="fidelity_lead">
+                        En EcoPatas cada pata cuenta. Por cada compra que realices sumas 1 punto en tu cartelito. Al completar tus <strong>3 compras / puntos</strong>, destinamos una donación especial al refugio de animales de Puerto Iguazú que vos elijas.
+                    </p>
+                </div>
+
+                <div class="fidelity-card-wrapper">
+                    <div class="fidelity-card">
+                        <div class="fidelity-card-inner">
+                            <div class="fidelity-badge-top">
+                                <span class="badge-icon">🐾</span>
+                                <span data-i18n="fidelity_badge_top">Cartelito Oficial • 3 Compras Solidarias</span>
+                            </div>
+
+                            <div class="fidelity-header">
+                                <h3 class="fidelity-brand" data-i18n="fidelity_brand">EcoPatas • Fidelidad</h3>
+                                <p class="fidelity-instruction" data-i18n="fidelity_instruction">Haz clic en cada huellita para marcar tus compras:</p>
+                            </div>
+
+                            <!-- Los 3 puntos / sellos interactivos -->
+                            <div class="fidelity-stamps-grid" role="group" aria-label="Puntos de fidelidad acumulados">
+                                <button type="button" class="stamp-slot" id="stamp-1" onclick="togglePunto(1)" aria-label="Punto 1">
+                                    <span class="stamp-number">1</span>
+                                    <div class="stamp-icon-box">
+                                        <span class="stamp-paw">🐾</span>
+                                    </div>
+                                    <span class="stamp-status" id="stamp-status-1" data-i18n="stamp_pending">Pendiente</span>
+                                </button>
+
+                                <button type="button" class="stamp-slot" id="stamp-2" onclick="togglePunto(2)" aria-label="Punto 2">
+                                    <span class="stamp-number">2</span>
+                                    <div class="stamp-icon-box">
+                                        <span class="stamp-paw">🐾</span>
+                                    </div>
+                                    <span class="stamp-status" id="stamp-status-2" data-i18n="stamp_pending">Pendiente</span>
+                                </button>
+
+                                <button type="button" class="stamp-slot" id="stamp-3" onclick="togglePunto(3)" aria-label="Punto 3">
+                                    <span class="stamp-number">3</span>
+                                    <div class="stamp-icon-box">
+                                        <span class="stamp-paw">🐾</span>
+                                    </div>
+                                    <span class="stamp-status" id="stamp-status-3" data-i18n="stamp_pending">Pendiente</span>
+                                </button>
+                            </div>
+
+                            <!-- Barra de progreso con botones de ajuste rápido -->
+                            <div class="fidelity-progress-bar-wrap">
+                                <div class="fidelity-progress-track">
+                                    <div class="fidelity-progress-fill" id="fidelity-progress" style="width: 0%;"></div>
+                                </div>
+                                <div class="fidelity-progress-text">
+                                    <span id="fidelity-count-text">0 de 3 compras registradas (¡haz tu primera compra!)</span>
+                                    <div class="fidelity-stepper-actions">
+                                        <button type="button" class="btn-step-point" onclick="ajustarPuntos(-1)" title="Restar compra" aria-label="Restar punto">-</button>
+                                        <button type="button" class="btn-step-point" onclick="ajustarPuntos(1)" title="Sumar compra" aria-label="Sumar punto">+</button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Selector de Refugios -->
+                            <div class="shelter-selection-box">
+                                <h4 class="shelter-title" data-i18n="shelter_title">¿A cuál de estos refugios quieres destinar la donación?</h4>
+                                <p class="shelter-subtitle" data-i18n="shelter_subtitle">Selecciona una de las dos entidades de protección animal de Puerto Iguazú:</p>
+
+                                <div class="shelter-options">
+                                    <label class="shelter-radio-card active" id="label-shelter-1">
+                                        <input type="radio" name="refugio-donacion" value="Protectora Animal Patas a la Obra" id="shelter-patas" onchange="seleccionarRefugio('Protectora Animal Patas a la Obra')" checked>
+                                        <div class="shelter-card-content">
+                                            <span class="shelter-badge" data-i18n="shelter_badge_selected">Refugio Seleccionado</span>
+                                            <strong class="shelter-name">Protectora Animal Patas a la Obra</strong>
+                                            <span class="shelter-desc" data-i18n="shelter_desc_patas">Rescate, tránsito y cuidados de perros y gatos en situación de calle en Puerto Iguazú.</span>
+                                        </div>
+                                    </label>
+
+                                    <label class="shelter-radio-card" id="label-shelter-2">
+                                        <input type="radio" name="refugio-donacion" value="Tierra sin Mal" id="shelter-tierra" onchange="seleccionarRefugio('Tierra sin Mal')">
+                                        <div class="shelter-card-content">
+                                            <span class="shelter-badge" data-i18n="shelter_badge_option">Refugio</span>
+                                            <strong class="shelter-name">Tierra sin Mal</strong>
+                                            <span class="shelter-desc" data-i18n="shelter_desc_tierra">Organización dedicada a la preservación, sanidad y bienestar de animales rescatados en Misiones.</span>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <!-- Aviso cuando se completan los 3 puntos (OBLIGATORIO) -->
+                            <div id="fidelity-completed-alert" class="fidelity-completed-alert hidden" role="alert" aria-live="polite">
+                                <div class="alert-icon-wrap">🎉</div>
+                                <div class="alert-content">
+                                    <div class="alert-badge" data-i18n="alert_badge">¡3 Puntos de Fidelidad Completados!</div>
+                                    <h4 class="alert-heading" data-i18n="alert_heading">¡Felicitaciones! Has completado tus 3 compras</h4>
+                                    <p class="alert-main-notice" id="alert-main-notice-text">
+                                        <strong>AVISO IMPORTANTE:</strong> Para validar tu beneficio y confirmar la donación destinada a <strong id="alert-refugio-nombre">Protectora Animal Patas a la Obra</strong>, <u>debes mostrar los tres puntos de fidelidad en el local físico</u> de EcoPatas (Calle Bonpland 389, entre Córdoba y Bonpland, Puerto Iguazú).
+                                    </p>
+                                    <div class="alert-voucher-box">
+                                        <span class="voucher-label" data-i18n="voucher_label">Código de Validación para el Local:</span>
+                                        <span class="voucher-code" id="fidelity-voucher-code">ECOPATAS-3PTS-IGZ</span>
+                                    </div>
+                                    <div class="alert-actions">
+                                        <button type="button" class="btn btn-reset-fidelity" onclick="reiniciarCartelito()">
+                                            <span data-i18n="btn_reset_fidelity">Reiniciar Cartelito / Iniciar Nuevo Ciclo</span>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================
+             SECCIÓN INTERACTIVA: CALCULADOR DE IMPACTO ECOLÓGICO
+             ======================================================== -->
+        <section id="impacto" class="impact-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle" data-i18n="impact_subtitle">Simulador en Tiempo Real</span>
+                    <h2 class="section-title" data-i18n="impact_title">Calcula el Impacto Ambiental de tu Elección</h2>
+                    <div class="section-divider"></div>
+                    <p class="section-lead" data-i18n="impact_lead">
+                        Descubre cuántos residuos textiles, neumáticos y litros de agua salvas con cada producto EcoPatas que sumas a tu hogar.
+                    </p>
+                </div>
+
+                <div class="impact-calculator-card">
+                    <div class="calculator-controls">
+                        <h3 class="controls-title" data-i18n="calc_controls_title">Selecciona los productos a simular:</h3>
+                        
+                        <!-- Control 1: Camitas -->
+                        <div class="control-row">
+                            <div class="control-label-group">
+                                <span class="control-icon">🛞</span>
+                                <div>
+                                    <label for="qty-camitas" class="control-name" data-i18n="calc_camitas_label">Camitas de Neumáticos</label>
+                                    <span class="control-detail" data-i18n="calc_camitas_detail">(1 neumático + ~1.8 kg tela y retazos por camita)</span>
+                                </div>
+                            </div>
+                            <div class="control-stepper">
+                                <button type="button" class="stepper-btn" onclick="cambiarCantidad('camitas', -1)" aria-label="Disminuir camitas">-</button>
+                                <input type="number" id="qty-camitas" class="stepper-input" value="1" min="0" max="50">
+                                <button type="button" class="stepper-btn" onclick="cambiarCantidad('camitas', 1)" aria-label="Aumentar camitas">+</button>
+                            </div>
+                        </div>
+
+                        <!-- Control 2: Ropita -->
+                        <div class="control-row">
+                            <div class="control-label-group">
+                                <span class="control-icon">👕</span>
+                                <div>
+                                    <label for="qty-ropitas" class="control-name" data-i18n="calc_ropitas_label">Ropitas / Abrigos Reciclados</label>
+                                    <span class="control-detail" data-i18n="calc_ropitas_detail">(~0.4 kg de prendas recuperadas por unidad)</span>
+                                </div>
+                            </div>
+                            <div class="control-stepper">
+                                <button type="button" class="stepper-btn" onclick="cambiarCantidad('ropitas', -1)" aria-label="Disminuir ropitas">-</button>
+                                <input type="number" id="qty-ropitas" class="stepper-input" value="2" min="0" max="50">
+                                <button type="button" class="stepper-btn" onclick="cambiarCantidad('ropitas', 1)" aria-label="Aumentar ropitas">+</button>
+                            </div>
+                        </div>
+
+                        <!-- Botones rápidos de preajustes -->
+                        <div class="presets-row">
+                            <span class="presets-title" data-i18n="calc_presets_title">Combos sugeridos:</span>
+                            <div class="presets-buttons">
+                                <button type="button" class="btn-preset" onclick="cargarPreset(1, 1)" data-i18n="preset_1">Combo Hogar (1 Camita + 1 Ropita)</button>
+                                <button type="button" class="btn-preset" onclick="cargarPreset(2, 3)" data-i18n="preset_2">Pack Multimascotas (2 Camitas + 3 Ropitas)</button>
+                                <button type="button" class="btn-preset" onclick="cargarPreset(0, 2)" data-i18n="preset_3">Solo Ropitas Upcycled (2 Prendas)</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Métricas visuales de impacto -->
+                    <div class="calculator-results">
+                        <div class="results-header">
+                            <span class="results-badge" data-i18n="results_badge">Huella Positiva Acumulada</span>
+                            <h4 class="results-title" data-i18n="results_title">Aporte Ecológico Estimado</h4>
+                        </div>
+
+                        <div class="results-grid">
+                            <div class="result-tile">
+                                <div class="tile-icon-bg">🧵</div>
+                                <div class="tile-data">
+                                    <span class="tile-value" id="val-textil">2.6</span>
+                                    <span class="tile-unit">kg</span>
+                                </div>
+                                <span class="tile-name" data-i18n="tile_textil_name">Residuos textiles rescatados</span>
+                                <p class="tile-desc" data-i18n="tile_textil_desc">Desviados de vertederos y basurales a cielo abierto.</p>
+                            </div>
+
+                            <div class="result-tile">
+                                <div class="tile-icon-bg">🛞</div>
+                                <div class="tile-data">
+                                    <span class="tile-value" id="val-neumaticos">1</span>
+                                    <span class="tile-unit" data-i18n="unit_units">unidades</span>
+                                </div>
+                                <span class="tile-name" data-i18n="tile_tires_name">Neumáticos recuperados</span>
+                                <p class="tile-desc" data-i18n="tile_tires_desc">Menos criaderos de mosquitos (prevención de dengue en Iguazú).</p>
+                            </div>
+
+                            <div class="result-tile">
+                                <div class="tile-icon-bg">💧</div>
+                                <div class="tile-data">
+                                    <span class="tile-value" id="val-agua">26.000</span>
+                                    <span class="tile-unit" data-i18n="unit_liters">litros</span>
+                                </div>
+                                <span class="tile-name" data-i18n="tile_water_name">Agua preservada</span>
+                                <p class="tile-desc" data-i18n="tile_water_desc">Ahorro en cultivo y manufactura de telas vírgenes nuevas.</p>
+                            </div>
+
+                            <div class="result-tile">
+                                <div class="tile-icon-bg">🌿</div>
+                                <div class="tile-data">
+                                    <span class="tile-value" id="val-co2">39</span>
+                                    <span class="tile-unit">kg CO₂e</span>
+                                </div>
+                                <span class="tile-name" data-i18n="tile_co2_name">Emisiones evitadas</span>
+                                <p class="tile-desc" data-i18n="tile_co2_desc">Menor emisión de gases de efecto invernadero en la región.</p>
+                            </div>
+                        </div>
+
+                        <div class="impact-quote">
+                            <span class="quote-icon">💡</span>
+                            <span id="impact-message" data-i18n="impact_quote_default">¡Gran impacto! Tu elección salva recursos vitales y ayuda a la limpieza urbana de Puerto Iguazú.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================================
+             SECCIÓN PRIVADA: PANEL DE ADMINISTRACIÓN Y COSTOS
+             (Protegida con clave 4800)
+             ======================================================== -->
+        <section id="admin" class="admin-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle" data-i18n="admin_subtitle">Gestión Interna del Emprendimiento</span>
+                    <h2 class="section-title" data-i18n="admin_title">Panel de Administración &amp; Cálculo de Costos</h2>
+                    <div class="section-divider"></div>
+                    <p class="section-lead" data-i18n="admin_lead">
+                        Herramienta de análisis financiero para EcoPatas: costeo fijo, costeo variable y punto de equilibrio de la producción circular.
+                    </p>
+                </div>
+
+                <!-- 1. VISTA BLOQUEADA: FORMULARIO DE ACCESO CON CONTRASEÑA -->
+                <div id="admin-login-card" class="admin-auth-card">
+                    <div class="lock-icon-container">
+                        <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                        </svg>
+                    </div>
+                    <h3 class="auth-title" data-i18n="auth_title">Acceso Restringido a Administradores</h3>
+                    <p class="auth-description" data-i18n="auth_desc">
+                        Ingresa la clave de administración para desbloquear el calculador de costos de producción.
+                    </p>
+                    
+                    <form id="admin-login-form" class="auth-form" onsubmit="validarClaveAdmin(event)">
+                        <div class="auth-input-group">
+                            <label for="admin-pass" class="sr-only" data-i18n="auth_pass_label">Contraseña de administrador</label>
+                            <input type="password" id="admin-pass" class="auth-input" placeholder="Ingresa la contraseña..." data-i18n-placeholder="auth_placeholder" autocomplete="current-password" required>
+                            <button type="button" class="btn-toggle-pass" onclick="togglePasswordVisibility()" aria-label="Mostrar u ocultar contraseña">👁️</button>
+                        </div>
+                        <div id="auth-error-msg" class="auth-error-msg" role="alert" aria-live="polite"></div>
+                        <button type="submit" class="btn btn-primary btn-block">
+                            <span data-i18n="auth_btn_unlock">Desbloquear Panel</span>
+                            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </button>
+                    </form>
+                    <div class="auth-hint">
+                        <small data-i18n="auth_hint">Pista de acceso: La contraseña asignada es <strong>4800</strong>.</small>
+                    </div>
+                </div>
+
+                <!-- 2. VISTA DESBLOQUEADA: CALCULADOR DE COSTOS COMPLETO -->
+                <div id="admin-dashboard" class="admin-dashboard hidden">
+                    <div class="dashboard-topbar">
+                        <div class="topbar-user-info">
+                            <span class="user-badge-online"></span>
+                            <span class="user-greeting" data-i18n="admin_session_active">Sesión Activa: <strong>Administrador EcoPatas</strong></span>
+                        </div>
+                        <div class="topbar-actions">
+                            <button type="button" class="btn btn-outline-sm" onclick="restablecerCostosSugeridos()" data-i18n="btn_reset_values">Restablecer Valores</button>
+                            <button type="button" class="btn btn-logout" onclick="cerrarSesionAdmin()">
+                                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/></svg>
+                                <span data-i18n="btn_logout">Cerrar Sesión / Bloquear</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="dashboard-grid">
+                        
+                        <!-- Columna Izquierda: Entradas de Costos -->
+                        <div class="dashboard-col inputs-col">
+                            
+                            <!-- Grupo 1: Costos Fijos (CF) -->
+                            <div class="cost-panel-card">
+                                <div class="panel-card-header">
+                                    <span class="panel-card-icon">🏢</span>
+                                    <div>
+                                        <h4 class="panel-card-title" data-i18n="cf_group_title">1. Costos Fijos Mensuales (CF)</h4>
+                                        <p class="panel-card-sub" data-i18n="cf_group_sub">Gastos independientes de la cantidad producida.</p>
+                                    </div>
+                                </div>
+                                <div class="cost-fields-group">
+                                    <div class="input-field">
+                                        <label for="cf-espacio" data-i18n="cf_field_rent">Espacio de taller / Alquiler mensual ($):</label>
+                                        <input type="number" id="cf-espacio" class="cost-input" value="25000" min="0" step="500">
+                                    </div>
+                                    <div class="input-field">
+                                        <label for="cf-servicios" data-i18n="cf_field_services">Servicios (Luz, agua, internet) ($):</label>
+                                        <input type="number" id="cf-servicios" class="cost-input" value="12000" min="0" step="500">
+                                    </div>
+                                    <div class="input-field">
+                                        <label for="cf-herramientas" data-i18n="cf_field_tools">Amortización / Mantenimiento de herramientas ($):</label>
+                                        <input type="number" id="cf-herramientas" class="cost-input" value="8000" min="0" step="500">
+                                        <small class="field-help" data-i18n="cf_field_tools_help">Tijeras de sastrería, agujas industriales, cepillos y lijas.</small>
+                                    </div>
+                                    <div class="input-field">
+                                        <label for="cf-publicidad" data-i18n="cf_field_marketing">Marketing digital y viáticos de recolección ($):</label>
+                                        <input type="number" id="cf-publicidad" class="cost-input" value="5000" min="0" step="500">
+                                    </div>
+                                </div>
+                                <div class="subtotal-bar">
+                                    <span data-i18n="cf_total_label">Total Costos Fijos (CF):</span>
+                                    <strong id="display-total-cf">$ 50.000,00</strong>
+                                </div>
+                            </div>
+
+                            <!-- Grupo 2: Costos Variables Unitarios (CV) -->
+                            <div class="cost-panel-card">
+                                <div class="panel-card-header">
+                                    <span class="panel-card-icon">🧵</span>
+                                    <div>
+                                        <h4 class="panel-card-title" data-i18n="cv_group_title">2. Costos Variables Unitarios (CV)</h4>
+                                        <p class="panel-card-sub" data-i18n="cv_group_sub">Gastos por cada unidad/lote elaborado.</p>
+                                    </div>
+                                </div>
+                                <div class="eco-notice-box" data-i18n="cv_eco_notice">
+                                    <strong>Nota de Economía Circular:</strong> Las telas donadas, prendas en desuso y neumáticos recuperados se cargan a <strong>costo de adquisición $0</strong> gracias al esquema de upcycling y donaciones vecinales en Iguazú.
+                                </div>
+                                <div class="cost-fields-group">
+                                    <div class="input-field">
+                                        <label for="cv-hilos" data-i18n="cv_field_threads">Hilos de alta tenacidad, elásticos y botones ($):</label>
+                                        <input type="number" id="cv-hilos" class="cost-input" value="950" min="0" step="50">
+                                    </div>
+                                    <div class="input-field">
+                                        <label for="cv-limpieza" data-i18n="cv_field_cleaning">Limpieza profunda, lavandina y desinfección de neumáticos ($):</label>
+                                        <input type="number" id="cv-limpieza" class="cost-input" value="800" min="0" step="50">
+                                    </div>
+                                    <div class="input-field">
+                                        <label for="cv-pintura" data-i18n="cv_field_paint">Pintura al agua ecológica para llantas / terminaciones ($):</label>
+                                        <input type="number" id="cv-pintura" class="cost-input" value="650" min="0" step="50">
+                                    </div>
+                                    <div class="input-field">
+                                        <label for="cv-etiquetas" data-i18n="cv_field_packaging">Etiqueta biodegradable y bolsa de papel reciclado ($):</label>
+                                        <input type="number" id="cv-etiquetas" class="cost-input" value="350" min="0" step="50">
+                                    </div>
+                                </div>
+                                <div class="subtotal-bar">
+                                    <span data-i18n="cv_total_label">Costo Variable Unitario Promedio (CVu):</span>
+                                    <strong id="display-total-cv-unit">$ 2.750,00</strong>
+                                </div>
+                            </div>
+
+                            <!-- Grupo 3: Volumen y Precio de Venta -->
+                            <div class="cost-panel-card">
+                                <div class="panel-card-header">
+                                    <span class="panel-card-icon">📊</span>
+                                    <div>
+                                        <h4 class="panel-card-title" data-i18n="market_group_title">3. Parámetros de Mercado</h4>
+                                        <p class="panel-card-sub" data-i18n="market_group_sub">Volumen mensual proyectado y precio de venta.</p>
+                                    </div>
+                                </div>
+                                <div class="cost-fields-group">
+                                    <div class="input-field">
+                                        <label for="param-unidades" data-i18n="market_field_units">Unidades estimadas a producir/vender por mes:</label>
+                                        <input type="number" id="param-unidades" class="cost-input" value="20" min="1" max="1000">
+                                    </div>
+                                    <div class="input-field">
+                                        <label for="param-precio" data-i18n="market_field_price">Precio de Venta Promedio Estimado por Unidad ($):</label>
+                                        <input type="number" id="param-precio" class="cost-input" value="7000" min="500" step="100">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Columna Derecha: Resumen de Indicadores Clave -->
+                        <div class="dashboard-col results-col">
+                            <div class="financial-summary-card">
+                                <h4 class="summary-card-title" data-i18n="summary_title">Resumen de Indicadores Clave</h4>
+                                <p class="summary-card-sub" data-i18n="summary_sub">Cálculos automáticos del modelo de negocios</p>
+
+                                <div class="metrics-stack">
+                                    <div class="metric-row">
+                                        <div class="metric-desc">
+                                            <span class="metric-title" data-i18n="metric_ct_title">Costo Total Mensual (CT)</span>
+                                            <span class="metric-formula" data-i18n="metric_ct_formula">CT = Costos Fijos + (CVu × Unidades)</span>
+                                        </div>
+                                        <div class="metric-val" id="res-costo-total">$ 105.000,00</div>
+                                    </div>
+
+                                    <div class="metric-row">
+                                        <div class="metric-desc">
+                                            <span class="metric-title" data-i18n="metric_cu_title">Costo Unitario Real (Cu)</span>
+                                            <span class="metric-formula" data-i18n="metric_cu_formula">Cu = Costo Total / Unidades producidas</span>
+                                        </div>
+                                        <div class="metric-val" id="res-costo-unitario">$ 5.250,00</div>
+                                    </div>
+
+                                    <div class="metric-row">
+                                        <div class="metric-desc">
+                                            <span class="metric-title" data-i18n="metric_mc_title">Margen Contribución Unitario (MC)</span>
+                                            <span class="metric-formula" data-i18n="metric_mc_formula">MC = Precio de Venta - CVu</span>
+                                        </div>
+                                        <div class="metric-val" id="res-margen-contribucion">$ 4.250,00</div>
+                                    </div>
+
+                                    <div class="metric-row highlight-metric">
+                                        <div class="metric-desc">
+                                            <span class="metric-title" data-i18n="metric_pe_title">Punto de Equilibrio (PE)</span>
+                                            <span class="metric-formula" data-i18n="metric_pe_formula">PE = Costos Fijos / MC</span>
+                                        </div>
+                                        <div class="metric-val">
+                                            <span id="res-punto-equilibrio">12</span>
+                                            <span class="metric-unit" data-i18n="unit_units">unidades</span>
+                                        </div>
+                                    </div>
+
+                                    <div class="metric-row">
+                                        <div class="metric-desc">
+                                            <span class="metric-title" data-i18n="metric_it_title">Ingresos Totales (IT)</span>
+                                            <span class="metric-formula" data-i18n="metric_it_formula">IT = Precio de Venta × Unidades</span>
+                                        </div>
+                                        <div class="metric-val text-success" id="res-ingresos-totales">$ 140.000,00</div>
+                                    </div>
+
+                                    <div class="metric-row highlight-profit">
+                                        <div class="metric-desc">
+                                            <span class="metric-title" data-i18n="metric_profit_title">Ganancia Neta Mensual</span>
+                                            <span class="metric-formula" data-i18n="metric_profit_formula">Ganancia = Ingresos Totales - Costo Total</span>
+                                        </div>
+                                        <div class="metric-val bold-profit" id="res-ganancia-neta">$ 35.000,00</div>
+                                    </div>
+
+                                    <div class="metric-row">
+                                        <div class="metric-desc">
+                                            <span class="metric-title" data-i18n="metric_margin_title">Margen sobre Ventas (%)</span>
+                                            <span class="metric-formula" data-i18n="metric_margin_formula">(Ganancia / Ingresos) × 100</span>
+                                        </div>
+                                        <div class="metric-val" id="res-margen-porcentual">25.0 %</div>
+                                    </div>
+                                </div>
+
+                                <!-- Diagnóstico de Viabilidad -->
+                                <div id="status-viabilidad" class="status-viabilidad viable">
+                                    <div class="viabilidad-icon">✅</div>
+                                    <div class="viabilidad-info">
+                                        <strong id="viabilidad-title">Emprendimiento Rentable</strong>
+                                        <p id="viabilidad-desc">La producción proyectada supera el punto de equilibrio, generando un margen positivo para el proyecto.</p>
+                                    </div>
+                                </div>
+
+                                <div class="admin-data-storage-notice">
+                                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+                                    <span data-i18n="admin_storage_notice">Tus datos se guardan automáticamente en <strong>localStorage</strong> de tu navegador para conservarse al recargar.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ========================================================
+             SECCIÓN CONTACTO Y UBICACIÓN
+             ======================================================== -->
+        <section id="contacto" class="contact-section">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-subtitle" data-i18n="contact_subtitle">Conectemos</span>
+                    <h2 class="section-title" data-i18n="contact_title">Encuéntranos en Puerto Iguazú</h2>
+                    <div class="section-divider"></div>
+                    <p class="section-lead" data-i18n="contact_lead">
+                        ¿Tienes telas o neumáticos limpios para donar? ¿Quieres encargar una camita o ropita a medida para tu mascota? ¡Escríbenos o visítanos!
+                    </p>
+                </div>
+
+                <div class="contact-grid">
+                    
+                    <!-- Tarjeta de Información y Ubicación -->
+                    <div class="contact-info-card">
+                        <div class="info-badge" data-i18n="contact_hq_badge">Sede del Proyecto</div>
+                        <h3 class="contact-card-title">EcoPatas Iguazú</h3>
+                        <p class="contact-intro" data-i18n="contact_intro">
+                            Microemprendimiento de triple impacto social, ecológico y comunitario.
+                        </p>
+
+                        <div class="contact-details-list">
+                            <div class="contact-detail-item">
+                                <div class="detail-icon">📍</div>
+                                <div class="detail-content">
+                                    <strong data-i18n="contact_address_label">Dirección Física:</strong>
+                                    <p>Bonpland 389 (entre calle Córdoba y Bonpland)</p>
+                                    <p>Puerto Iguazú, Misiones, Argentina (CP 3370)</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-detail-item">
+                                <div class="detail-icon">⏰</div>
+                                <div class="detail-content">
+                                    <strong data-i18n="contact_hours_label">Horarios de Taller:</strong>
+                                    <p data-i18n="contact_hours_p1">Lunes a Viernes: 08:00 a 12:30 y 14:00 a 18:00 hs</p>
+                                    <p data-i18n="contact_hours_p2">Recepción de donaciones textiles los días miércoles.</p>
+                                </div>
+                            </div>
+
+                            <div class="contact-detail-item">
+                                <div class="detail-icon">💬</div>
+                                <div class="detail-content">
+                                    <strong data-i18n="contact_phone_label">Atención por WhatsApp / Teléfono:</strong>
+                                    <p>
+                                        <a href="https://wa.me/5493757320167" target="_blank" rel="noopener noreferrer" class="contact-link-highlight">
+                                            +54 9 3757 320167
+                                        </a>
+                                    </p>
+                                    <small data-i18n="contact_phone_note">Respuestas coordinadas por el equipo de EcoPatas.</small>
+                                </div>
+                            </div>
+
+                            <div class="contact-detail-item">
+                                <div class="detail-icon">✉️</div>
+                                <div class="detail-content">
+                                    <strong data-i18n="contact_email_label">Correo Electrónico:</strong>
+                                    <p>contacto.ecopatas.iguazu@gmail.com</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Mapa representativo interactivo con diseño lila -->
+                        <div class="map-preview-card">
+                            <div class="map-header">
+                                <span class="map-dot"></span>
+                                <span data-i18n="map_header_text">Punto Geográfico: Bonpland 389, Puerto Iguazú</span>
+                            </div>
+                            <div class="map-placeholder">
+                                <div class="map-streets">
+                                    <div class="street street-cordoba" data-i18n="street_cordoba">Calle Córdoba</div>
+                                    <div class="street street-bonpland" data-i18n="street_bonpland">Calle Bonpland 389 <span>📍 EcoPatas</span></div>
+                                </div>
+                                <div class="map-marker-pin">
+                                    <span class="marker-pulse"></span>
+                                    <span class="marker-label">🐾 Taller EcoPatas</span>
+                                </div>
+                            </div>
+                            <div class="map-actions">
+                                <a href="https://www.google.com/maps/search/?api=1&query=Bonpland+389,+Puerto+Iguazu,+Misiones" target="_blank" rel="noopener noreferrer" class="btn btn-map-link">
+                                    <span data-i18n="btn_open_maps">Abrir en Google Maps</span>
+                                    <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Formulario de Mensajes / Pedidos -->
+                    <div class="contact-form-card">
+                        <h3 class="form-title" data-i18n="form_title">Envíanos un mensaje o consulta</h3>
+                        <p class="form-subtitle" data-i18n="form_subtitle">Te responderemos a la brevedad para asesorarte.</p>
+                        
+                        <form id="contact-form" onsubmit="enviarMensajeContacto(event)">
+                            <div class="form-group">
+                                <label for="contacto-nombre" data-i18n="form_name_label">Nombre y Apellido:</label>
+                                <input type="text" id="contacto-nombre" class="form-control" placeholder="Ej. Valentina Morales" data-i18n-placeholder="form_name_placeholder" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contacto-email" data-i18n="form_email_label">Correo Electrónico:</label>
+                                <input type="email" id="contacto-email" class="form-control" placeholder="ejemplo@correo.com" data-i18n-placeholder="form_email_placeholder" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contacto-tipo" data-i18n="form_type_label">Tipo de Consulta:</label>
+                                <select id="contacto-tipo" class="form-control" required>
+                                    <option value="" disabled selected data-i18n="opt_select">Selecciona una opción...</option>
+                                    <option value="pedido" data-i18n="opt_order">Quiero encargar una camita o prenda</option>
+                                    <option value="donacion" data-i18n="opt_donate">Quiero donar telas, ropas o neumáticos</option>
+                                    <option value="institucional" data-i18n="opt_collab">Consulta comercial o institucional</option>
+                                    <option value="otro" data-i18n="opt_other">Otras consultas</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="contacto-mensaje" data-i18n="form_msg_label">Tu Mensaje:</label>
+                                <textarea id="contacto-mensaje" rows="4" class="form-control" placeholder="Cuéntanos el tamaño de tu mascota o los detalles de tu donación..." data-i18n-placeholder="form_msg_placeholder" required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-block">
+                                <span data-i18n="btn_send_msg">Enviar Mensaje</span>
+                                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                            </button>
+
+                            <div id="contact-feedback" class="contact-feedback hidden" role="status"></div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ========================================================
+         PIE DE PÁGINA (FOOTER)
+         ======================================================== -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-col brand-col">
+                <div class="footer-logo">
+                    <img src="logo.png" alt="Logo EcoPatas" class="footer-logo-img" width="40" height="40">
+                    <span class="footer-brand-name">EcoPatas</span>
+                </div>
+                <p class="footer-tagline" data-i18n="footer_tagline">"Donde cada pata deja huellas"</p>
+                <p class="footer-about-text" data-i18n="footer_about">
+                    Iniciativa de economía circular y supra-reciclaje nacida en Puerto Iguazú, provincia de Misiones, Argentina. Cuidamos mascotas y protegemos el medio ambiente.
+                </p>
+            </div>
+
+            <div class="footer-col links-col">
+                <h4 class="footer-heading" data-i18n="footer_links_heading">Secciones Rápidas</h4>
+                <ul class="footer-nav">
+                    <li><a href="#inicio" data-i18n="nav_inicio">Inicio</a></li>
+                    <li><a href="#nosotros" data-i18n="nav_nosotros">Sobre Nosotros</a></li>
+                    <li><a href="#productos" data-i18n="nav_productos">Catálogo de Productos</a></li>
+                    <li><a href="#fidelidad" data-i18n="nav_fidelidad">Cartelito de Fidelidad</a></li>
+                    <li><a href="#impacto" data-i18n="nav_impacto">Calculador Ecológico</a></li>
+                    <li><a href="#admin" data-i18n="nav_admin">Panel Admin (Costos)</a></li>
+                    <li><a href="#contacto" data-i18n="nav_contacto">Contacto &amp; Ubicación</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col social-col">
+                <h4 class="footer-heading" data-i18n="footer_commitments_heading">Compromiso Sustentable</h4>
+                <div class="footer-pill">
+                    <span data-i18n="footer_pill_loc">📍 Bonpland 389, Iguazú</span>
+                </div>
+                <div class="footer-pill">
+                    <span data-i18n="footer_pill_zw">♻️ Enfoque Zero Waste</span>
+                </div>
+                <div class="footer-pill">
+                    <span data-i18n="footer_pill_pets">🐕 100% Amigable con Mascotas</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container footer-bottom-container">
+                <p data-i18n="footer_copy">&copy; 2026 EcoPatas • Microemprendimiento Sustentable. Todos los derechos reservados.</p>
+                <p class="footer-credits" data-i18n="footer_credits">Desarrollado con pasión y conciencia ambiental en Puerto Iguazú, Misiones.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script de interactividad y traducciones -->
+    <script src="script.js"></script>
+</body>
+</html>
